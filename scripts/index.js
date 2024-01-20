@@ -2,9 +2,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // MENU TOGGLE
     const menu = document.querySelector('#menu')
     const nav = document.querySelector('#nav')
+    const contentNav = document.querySelector('#contentNav')
 
     menu.addEventListener('click', function() {
-        nav.classList.toggle('visible')
+        nav.classList.toggle('visible');
+        contentNav.classList.toggle('content-nav__styles')
     })
 
     // FUNCIONES PARA TARJETA GIRATORIA
@@ -28,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
         back.addEventListener('click', function() {
             faceFrontElements[index].classList.remove('face', 'front');
             faceBackElements[index].classList.remove('face', 'back');
-            faceBackElements[index].classList.add('visible')
+            // faceBackElements[index].classList.add('visible')
         });
     });
 

@@ -16,11 +16,11 @@
 
 </head>
 <body>
-    <header>
+    <header class="background">
         <div class="container">
-            <div class="content-nav">
-                <div href="index.html" class="logo">
-                    <img src="img/logoHorizontal.webp" alt="">
+            <div id="contentNav" class="content-nav">
+                <div class="logo">
+                    <a href="index.html"><img src="img/logoHorizontal.webp" alt="Logo"></a>
                     
                     <a href="#" id="menu"><i class="fa-solid fa-bars"></i></a>
                 </div>
@@ -32,22 +32,36 @@
                         <li><a href="portatiles.html">Portatiles</a></li>
                         <li><a href="moviles.html">Moviles</a></li>
                         <li><a href="desarrolloWeb.html">Desarrollo</a></li>
-                        
-                        <li><a href="desarrolloWeb.html"><li><button class="button-contact contact-no-visible">Contactanos</button></li></a></li>
+                        <button class="button-contact contact-no-visible" onclick="location.href='contacto.html'">Contactanos</button>
                     </ul>
                 </nav>
 
-                <li><button class="button-contact contact-visible">Contactanos</button></li>
+                <button class="button-contact contact-visible" onclick="location.href='contacto.html'">Contactanos</button>
             </div>
-        </div>
 
-        <script>
-        
-        </script>
+            <main>
+                <div class="content-main">
+                    <div class="content-left">
+                        <div class="description">
+                            <h1 class="titles">Lorem ipsum dolor sit amet</h1>
+                            <button class="button-begin" onclick="location.href='#card'">Comenzar</button>
+                        </div>
+                    </div>
+
+                    <div class="content-right">
+                        <div class="networks">
+                            <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+                            <a href=""><i class="fa-brands fa-facebook"></i></a>
+                            <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
     </header>
 
     <!-- ESTRUCTURA TARJETA GIRATORIA -->
-    <div class="card">
+    <div id="card" class="card">
         <div class="faceFront">
             <!-- IMAGEN DE FONDO -->
             <div class="box">

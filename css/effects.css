@@ -60,7 +60,7 @@
 }
 
 .card .front {
-    transform: perspective(600px) rotateY(0deg);
+    transform: perspective(600px) rotateY(180deg);
 }
 
 .box img {
@@ -70,23 +70,9 @@
     object-fit: cover;
 }
 
-.info {
-    position: relative;
-    top: 0rem;
-}
-
 .card .back {
     background-color: red;
-    transform: perspective(600px) rotateY(180deg);
-}
-
-.card .front {
-    transform: perspective(600px) rotateY(180deg);
-}
-
-.card .back {
+    position: absolute;
+    top: 0;
     transform: perspective(600px) rotateY(360deg);
 }
-
-
-
