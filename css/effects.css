@@ -1,47 +1,158 @@
+:root {
+    --fuentePrincipal: 'Istok Web', sans-serif;
+    --fondoPrincipal: #292B32;
+    --fondoSecundario: #1E1E1E;
+    --colorBotones: #0052CF;
+    --modalBackground: #474456b6;
+}
+
+/* CAJAS DE SERVICIOS */
+/* ========================================================================= */
+.our-services__grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}     
+
+@media (min-width: 1050px) {
+    .our-services__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
+    }
+}
+
+.box-services {
+    position: relative;
+    width: 17rem;
+    height: 17rem;
+    border-radius: 2rem;
+    display: flex;
+    align-items: flex-end;
+}
+
+@media (max-width: 700px) {
+    .box-services {
+        width: 20rem;
+        height: 20rem;
+    }
+}
+
+@media (min-width: 1100px) {
+    .box-services {
+        width: 17.5rem;
+        height: 17.5rem;
+    }
+}
+
+@media (min-width: 1300px) {
+    .box-services {
+        width: 20rem;
+        height: 20rem;
+    }
+}
+
+@media (min-width: 1400px) {
+    .box-services {
+        width: 21rem;
+        height: 21rem;
+    }
+}
+
+@media (min-width: 1500px) {
+    .box-services {
+        width: 23rem;
+        height: 23rem;
+    }
+}
+
+@media (min-width: 1050px) {
+    .box-services__complete {
+        height: 100% !important;
+        grid-row: span 2;
+        margin-left: -5rem;
+    }
+}
+
+.box-services::before {
+    position: absolute;
+    content: '';
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    border-radius: 2rem;
+}
+
+@media (min-width: 1050px) {
+    .box-double {
+        width: 30rem;
+    }   
+}
+
+@media (min-width: 1400px) {
+    .box-double {
+        width: 40rem;
+    }   
+}
+
+@media (min-width: 1050px) {
+    .margin-left {
+        margin-left: -10rem 
+    }
+}
+
+/* BACKGROUNDS AND FILTERS */
+.box-services:hover::before {
+    background-color: transparent;
+    transition: all .3s ease-in-out;
+}
+
+.box-services_1 {
+    background-image: url(../img/mantenimiento.avif);
+}
+.box-services_1::before {
+    background-color: rgba(23, 59, 112, 0.555);
+}
+
+.box-services_2 {
+    background-image: url(../img/developerweb.avif);
+}
+.box-services_2::before {
+    background-color: rgba(0, 31, 51, 0.692);
+}
+
+.box-services_3 {
+    background-image: url(../img/portatil.avif);
+}
+.box-services_3::before {
+    background-color: rgba(112, 23, 82, 0.685);
+}
+
+.box-services_4 {
+    background-image: url(../img/realme.avif);
+}
+.box-services_4::before {
+    background-color: rgba(112, 23, 23, 0.712);
+}
+
+.box-services_5 {
+    background-image: url(../img/audifonos.avif);
+}
+.box-services_5::before {
+    background-color: rgba(153, 74, 0, 0.692);
+}
+
+.box-services i, h3 {
+    position: relative;
+}
 
 /* EFECTOS PARA CAJAS */
 /* ========================================================================= */
 
-/* BOX */
-
-.box {
-    width: 20rem;
-    height: 30rem;
-    background-color: red;
-    position: relative;
-    z-index: 99;
-    overflow: hidden;
-}
-
-/* MOVIMIENTO DE CAJA */
-.filtroTotal, .filtroProducts {
-    width: 20rem;
-    height: 30rem;
-    background-color: orange;
-    position: absolute;
-    transition: all .7s ease;
-}
-
-.filtroTotal {
-    top: 30rem;
-}
-
-.filtroProducts {
-    top: 25rem;
-}
-
-.box:hover > .filtroTotal {
-    top: 0rem
-}
-
-.box:hover > .filtroProducts{
-    top: 13rem;
-}
-
 /* FLIP CARD */
 .card {
-    width: 300px;
-    height: 500px;
+    width: 20rem;
+    height: 30rem;
     position: relative;
 }
 
@@ -63,6 +174,10 @@
     transform: perspective(600px) rotateY(180deg);
 }
 
+.face .content-card-maintenance {
+    display: none;
+}
+
 .box img {
     position: absolute;
     width: 100%;
@@ -71,8 +186,151 @@
 }
 
 .card .back {
-    background-color: red;
     position: absolute;
     top: 0;
     transform: perspective(600px) rotateY(360deg);
+}
+
+/* BOX */
+.box {
+    width: 20rem;
+    height: 30rem;
+    position: relative;
+    z-index: 99;
+    overflow: hidden;
+}
+
+/* MOVIMIENTO DE CAJA */
+.filtroTotal, .filtroProducts {
+    width: 20rem;
+    height: 30rem;
+    position: absolute;
+    transition: all .7s ease;
+}
+
+.filtroTotal, .filtroProducts {
+    top: 20rem;
+}
+
+.box:hover > .filtroTotal {
+    top: 0rem
+}
+
+.box:hover > .filtroProducts{
+    top: 5rem;
+}
+
+/* =========================== */
+/* SECTION MORE */
+/* ============================ */
+.box-more {
+    display: flex;
+    width: 15rem;
+    height: 15rem;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--fondoSecundario);
+    border-radius: 1.5rem;
+    padding: 2rem;
+}
+
+@media (min-width: 1250px) {
+    .box-more {
+        width: 17rem;
+        height: 17rem;
+    }
+    
+}
+
+@media (min-width: 1400px) {
+    .box-more {
+        width: 20rem;
+        height: 20rem;
+    }
+    
+}
+
+.box-more:hover {
+    background-color: var(--colorBotones);
+}
+
+.box-more i {
+    font-size: 3rem;
+}
+
+.box-more h3 {
+    font-size: 1.2rem;
+    line-height: 2rem;
+    padding-right: 4rem;
+    text-transform: uppercase;
+    color: #FFF;
+}
+
+.box-more, .box-more__active {
+    transition: all .3s ease-in-out;
+}
+
+.box-more__active {
+    background-color: var(--colorBotones);
+}
+
+.box-more__active:hover {
+    background-color: var(--fondoSecundario);
+}
+
+/* =========================== */
+/* MODAL */
+/* ============================ */
+.modal {
+    display: none;
+    place-items: center;
+    position: absolute;
+    top: 0; bottom: 0;
+    right: 0; left: 0;
+    z-index: 909;
+    background-color: rgba(0, 0, 0, 0.61);
+}
+
+@media (min-width: 1100px) {
+    .modal {
+        background: none;
+    }
+}
+
+.modal-grid {
+    display: grid;
+}
+
+.confirmation-message {
+    width: 20rem;
+    height: 20rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    border-radius: 2rem;
+    box-shadow: .1rem .1rem 1rem #000000;
+    background-color: var(--modalBackground);
+}
+
+.confirmation-message i, h3, button {
+    color: #FFF;
+    position: relative;
+}
+
+.icon-check {
+    background-color: #FFF;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+
+.icon-check i {
+    font-size: 5rem;
+    color: var(--colorBotones);
 }

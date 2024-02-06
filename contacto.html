@@ -12,37 +12,87 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/effects.css">
 
-    <title>Compubrandt - Home</title>
+    <title>Compubrandt - Contacto</title>
 
 </head>
 <body>
-    <header>
+    <header class="background banner-contacto">
         <div class="container">
-            <div class="content-nav">
-                <div href="index.html" class="logo">
-                    <img src="img/logoHorizontal.webp" alt="">
+            <div id="contentNav" class="content-nav">
+                <div class="logo">
+                    <a href="index.html"><img src="img/logoHorizontal.avif" alt="Logo"></a>
                     
                     <a href="#" id="menu"><i class="fa-solid fa-bars"></i></a>
                 </div>
                 
                 <nav id="nav">
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="mantenimiento..html">Mantenimiento</a></li>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="mantenimiento.html">Mantenimiento</a></li>
                         <li><a href="portatiles.html">Portatiles</a></li>
                         <li><a href="moviles.html">Moviles</a></li>
                         <li><a href="desarrolloWeb.html">Desarrollo</a></li>
-                        
-                        <li><a href="desarrolloWeb.html"><li><button class="button-contact contact-no-visible">Contactanos</button></li></a></li>
+                        <li><a href="perifericos.html">Perifericos</a></li>
+                        <button class="button-contact contact-no-visible" onclick="location.href='contacto.html'">Contactanos</button>
                     </ul>
                 </nav>
 
-                <li><button class="button-contact contact-visible">Contactanos</button></li>
+                <button class="button-contact contact-visible" onclick="location.href='contacto.html'">Contactanos</button>
             </div>
+
+            <main>
+                <div class="content-main">
+                    <div class="content-left">
+                        <div class="description">
+                            <h1 class="titles">¿Cómo podemos ayudarte hoy?</h1>
+                            <button class="button-begin" onclick="location.href='#contact-section'">Contáctanos</button>
+                        </div>
+                    </div>
+
+                    <div class="content-right">
+                        <div class="networks">
+                            <a href="https://wa.me/+573114482094" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                            <a href=""><i class="fa-brands fa-facebook"></i></a>
+                            <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </main>
         </div>
     </header>
+    
+    <section id="contact-section" class="mobile-section">
+        <div class="container">
+            <h1 class="titles titles-section">Enviamos tu solicitud...</h1>
 
-   
+            <div class="form-contact">
+                <div class="background-contact background"><!-- IMAGEN DE FONDO --></div>
+
+                <form action="">
+                    <label for="">Escribenos y en poco tiempo nos pondremos en contacto contigo.</label>
+                    <input type="text" placeholder="Nombre">
+                    <input type="tel" placeholder="Telefono">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Mensaje..."></textarea>
+                    <input type="submit" value="Enviar" class="button-more">
+
+                </form>
+            </div>
+            
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <a href="index.html">
+                <img src="img/logoCompubrandt.png" alt="">
+            </a>
+
+            <a href="index.html">Compubrandt - 2024</a>
+
+            <button class="button-begin" onclick="location.href='contacto.html'">Contactanos</button>
+        </div>
+    </footer>
+
 </body>
 
 <script src="scripts/index.js"></script>

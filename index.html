@@ -16,22 +16,23 @@
 
 </head>
 <body>
-    <header class="background">
+    <header class="background banner-home">
         <div class="container">
             <div id="contentNav" class="content-nav">
                 <div class="logo">
-                    <a href="index.html"><img src="img/logoHorizontal.webp" alt="Logo"></a>
+                    <a href="index.html"><img src="img/logoHorizontal.avif" alt="Logo"></a>
                     
                     <a href="#" id="menu"><i class="fa-solid fa-bars"></i></a>
                 </div>
                 
                 <nav id="nav">
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="mantenimiento..html">Mantenimiento</a></li>
+                        <li><a href="index.html" class="active">Inicio</a></li>
+                        <li><a href="mantenimiento.html">Mantenimiento</a></li>
                         <li><a href="portatiles.html">Portatiles</a></li>
                         <li><a href="moviles.html">Moviles</a></li>
                         <li><a href="desarrolloWeb.html">Desarrollo</a></li>
+                        <li><a href="perifericos.html">Perifericos</a></li>
                         <button class="button-contact contact-no-visible" onclick="location.href='contacto.html'">Contactanos</button>
                     </ul>
                 </nav>
@@ -43,14 +44,14 @@
                 <div class="content-main">
                     <div class="content-left">
                         <div class="description">
-                            <h1 class="titles">Lorem ipsum dolor sit amet</h1>
-                            <button class="button-begin" onclick="location.href='#card'">Comenzar</button>
+                            <h1 class="titles">Especialistas en reparación y mantenimiento.</h1>
+                            <button class="button-begin" onclick="location.href='#our-services'">Comenzar</button>
                         </div>
                     </div>
 
                     <div class="content-right">
                         <div class="networks">
-                            <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+                            <a href="https://wa.me/+573114482094" target="_blank"><i class="fa-brands fa-whatsapp"></i></a
                             <a href=""><i class="fa-brands fa-facebook"></i></a>
                             <a href=""><i class="fa-brands fa-instagram"></i></a>
                         </div>
@@ -60,22 +61,128 @@
         </div>
     </header>
 
-    <!-- ESTRUCTURA TARJETA GIRATORIA -->
-    <div id="card" class="card">
-        <div class="faceFront">
-            <!-- IMAGEN DE FONDO -->
-            <div class="box">
-                <img src="img/developerWeb.webp" alt="">
-                <div class="filtroProducts">
-                    <button class="viewMore button-more">Ver mas</button>
+    <section id="our-services" class="our-services">
+        <div class="container container-our__services">
+            <div class="our-services__description">
+                <h1 class="titles">Nuestros servicios</h1>
+    
+                <p>Compubrandt ofrece servicios integrales: reparación y mantenimiento, venta de dispositivos y accesorios vanguardistas. Tecnología, confianza e innovación para avanzar sin límites en el mundo digital.</p>
+            </div>
+
+            <div class="our-services__grid">
+                <div class="box-services background box-services_1">
+                    <a href="mantenimiento.html">
+                        <i class="fa-solid fa-wrench"></i>
+                        <h3 class="services-titles">Mantenimiento</h3>
+                    </a>
+                </div>
+
+                
+                <div class="box-services background box-services_2 box-services__complete">
+                    <a href="desarrolloWeb.html">
+                        <i class="fa-brands fa-js"></i>
+                        <h3 class="services-titles">Desarrollo</h3>
+                    </a>
+                </div>
+
+                <div class="box-services background box-services_3 margin-left">
+                    <a href="portatiles.html">
+                        <i class="fa-solid fa-laptop"></i>
+                        <h3 class="services-titles">Portatiles</h3>
+                    </a>
+                </div>
+
+                <div class="box-services background box-services_4">
+                    <a href="moviles.html">
+                        <i class="fa-solid fa-mobile"></i>
+                        <h3 class="services-titles">Celulares</h3>
+                    </a>
+                </div>
+
+                <div class="box-services background box-services_5 margin-left box-double">
+                    <a href="perifericos.html">
+                        <i class="fa-solid fa-music"></i>
+                        <h3 class="services-titles">Perifericos</h3>
+                    </a>
                 </div>
             </div>
         </div>
-        <div class="faceBack">
-            <!-- DESCRIPTION -->
-            <i class="backButton fa-solid fa-arrow-left"></i>
+    </section>
+    
+
+    <section class="more-info background">
+        <div class="container">
+            <h1 class="titles">Explora accesorios exclusivos en Compubrandt</h1>
+            
+            <p>Explora accesorios únicos en Compubrandt. Innovadores y esenciales para ti. ¡Haz clic y potencia tu experiencia tecnológica!</p>
+
+            <button class="button-begin" onclick="location.href='perifericos.html'">Ver más</button>
         </div>
-    </div>
+    </section>
+
+    
+    <section class="more">
+        <div class="container container-more">
+            <div class="content-more">
+                <div class="more-left">
+
+                    <div class="more-left__text">
+                        <h1 class="titles">Compubrandt: tu socio tecnológico confiable</h1>
+    
+                        <p>¿Requieres asesoría? Comunícate con nosotros para orientación especializada. Estamos a tu disposición.</p>
+    
+                        <button class="button-begin" onclick="location.href='contacto.html'">Ver más</button>
+                    </div>
+
+                    <div class="more-left__payment">
+                        <h3 >Aceptamos cualquier metodo de pago</h3>
+
+                        <div class="payment">
+                            <img src="img/logomasterCard.avif" alt="">
+                            <img src="img/logoVisa.avif" alt="">
+                            <img src="img/logoNequi.avif" alt="">
+                            <img src="img/daviplata.avif" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="more-right">
+                    <div class="box-more">
+                        <i class="fa-solid fa-truck-fast"></i>
+                        <h3 class="titles-services">Servicio a domicilio</h3>
+                    </div>
+
+                    <div class="box-more box-more__active">
+                        <i class="fa-solid fa-dollar-sign"></i>
+                        <h3 class="titles-services">Excelentes precios</h3>
+                    </div>
+
+                    <div class="box-more">
+                        <i class="fa-solid fa-business-time"></i>
+                        <h3 class="titles-services">Asistencia personalizada</h3>
+                    </div>
+
+                    <div class="box-more">
+                        <i class="fa-solid fa-star"></i>
+                        <h3 class="titles-services">Productos garantizados</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="container">
+            <a href="index.html">
+                <img src="img/logoCompubrandt.png" alt="">
+            </a>
+
+            <a href="index.html">Compubrandt - 2024</a>
+
+            <button class="button-begin" onclick="location.href='contacto.html'">Contactanos</button>
+        </div>
+    </footer>
 
 </body>
 

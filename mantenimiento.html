@@ -12,11 +12,11 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/effects.css">
 
-    <title>Compubrandt - Desarrollo</title>
+    <title>Compubrandt - Mantenimiento</title>
 
 </head>
 <body>
-    <header class="background banner-desarrollo">
+    <header class="background banner-mantenimiento">
         <div class="container">
             <div id="contentNav" class="content-nav">
                 <div class="logo">
@@ -31,7 +31,7 @@
                         <li><a href="mantenimiento.html">Mantenimiento</a></li>
                         <li><a href="portatiles.html">Portatiles</a></li>
                         <li><a href="moviles.html">Moviles</a></li>
-                        <li><a href="desarrolloWeb.html" class="active">Desarrollo</a></li>
+                        <li><a href="desarrolloWeb.html">Desarrollo</a></li>
                         <li><a href="perifericos.html">Perifericos</a></li>
                         <button class="button-contact contact-no-visible" onclick="location.href='contacto.html'">Contactanos</button>
                     </ul>
@@ -44,14 +44,15 @@
                 <div class="content-main">
                     <div class="content-left">
                         <div class="description">
-                            <h1 class="titles">¿Listo para destacar en la web?</h1>
-                            <button class="button-begin" onclick="location.href='#developer'">Comenzar</button>
+                            <h1 class="titles">Soluciones expertas en mantenimiento</h1>
+                            <p>Optimiza el rendimiento de tus equipos con nuestras soluciones expertas en mantenimiento</p>
+                            <button class="button-begin" onclick="location.href='#maintenance'">Comenzar</button>
                         </div>
                     </div>
 
                     <div class="content-right">
                         <div class="networks">
-                            <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+                            <a href="https://wa.me/+573114482094" target="_blank"><i class="fa-brands fa-whatsapp"></i></a
                             <a href=""><i class="fa-brands fa-facebook"></i></a>
                             <a href=""><i class="fa-brands fa-instagram"></i></a>
                         </div>
@@ -61,52 +62,33 @@
         </div>
     </header>
 
-    <section class="maintenance" id="developer">
+    <section class="maintenance" id="maintenance">
+
+        <div class="modal">
+            <div class="confirmation-message background">
+                <div class="icon-check">
+                    <i class="fa-regular fa-face-smile-wink"></i>
+                </div>
+                <h3>Solicitud enviada</h3>
+                <button class="button-begin closeModal">Listo</button>
+            </div>
+        </div>
+
         <div class="container">
-            <h1 class="titles">Creamos la solución perfecta para ti</h1>
+
+            <h1 class="titles titles-section">Solicita la revisión para tu ordenador</h1>
+            
             <div class="content-cards">
                 <!-- ESTRUCTURA TARJETA GIRATORIA -->
                 <div id="card" class="card">
             
                     <div class="faceFront">
                         <!-- IMAGEN DE FONDO -->
-                        <div class="box box-reparation developer-background1 background">
-                            <div class="filtroTotal content-card-maintenance developer1" id="contenido">
-                                <p>Desarrollo Web</p>
+                        <div class="box box-reparation box-card1 background">
+                            <div class="filtroTotal content-card-maintenance" id="contenido">
+                                <p>Reparacion de Equipo</p>
     
-                                <span>Construimos experiencias web excepcionales. Descubre nuestro servicio de desarrollo web para potenciar tu presencia digital.</span>
-    
-                                <button class="viewMore button-more">Solicitalo</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="faceBack content-card-maintenance">
-                        <!-- DESCRIPTION -->
-                        <i class="backButton fa-solid fa-arrow-left"></i>
-    
-                        <form action="">
-                            <label for="" class="">Envienos su solicitud</label>
-    
-                            <div class="campos">
-                                <input type="text" placeholder="Nombre" required data-nombre>
-                                <input type="tel" placeholder="Telefono" required data-telefono>
-                                <textarea name="" id="" cols="20" rows="5" placeholder="Detallenos su problema" required data-mensaje></textarea>
-                                <input type="submit" value="Enviar" class="button-more" data-enviar_diagnostico>
-                            </div>
-                        </form>
-    
-                    </div>
-                </div>
-    
-                <div id="card" class="card">
-            
-                    <div class="faceFront">
-                        <!-- IMAGEN DE FONDO -->
-                        <div class="box box-reparation developer-background2 background">
-                            <div class="filtroTotal content-card-maintenance developer2" id="contenido">
-                                <p>Desarrollo de Apps</p>
-    
-                                <span>Transforma tus ideas en aplicaciones innovadoras con nuestro servicio de desarrollo de aplicaciones móviles.</span>
+                                <span>Devolvemos la vida a tu dispositivo. Reparación rápida y eficaz garantizada.</span>
     
                                 <button class="viewMore button-more">Solicitalo</button>
                             </div>
@@ -134,11 +116,43 @@
             
                     <div class="faceFront">
                         <!-- IMAGEN DE FONDO -->
-                        <div class="box box-reparation developer-background3 background">
-                            <div class="filtroTotal content-card-maintenance developer3" id="contenido">
-                                <p>Mantenimiento Web</p>
+                        <div class="box box-reparation box-card2 background">
+                            <div class="filtroTotal content-card-maintenance" id="contenido">
+                                <p>Mantenimiento general</p>
     
-                                <span>Construimos experiencias web excepcionales. Descubre nuestro servicio de desarrollo web para potenciar tu presencia digital.</span>
+                                <span>Optimizamos tu dispositivo. Mantenimiento integral para un rendimiento duradero.</span>
+    
+                                <button class="viewMore button-more">Solicitalo</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faceBack content-card-maintenance">
+                        <!-- DESCRIPTION -->
+                        <i class="backButton fa-solid fa-arrow-left"></i>
+    
+                        <form action="">
+                            <label for="" class="">Envienos su solicitud</label>
+    
+                            <div class="campos">
+                                <input type="text" placeholder="Nombre" required data-nombre>
+                                <input type="tel" placeholder="Telefono" required data-telefono>
+                                <textarea name="" id="" cols="20" rows="5" placeholder="Detallenos su problema" required data-mensaje></textarea>
+                                <input type="submit" value="Enviar" class="button-more" data-enviar_diagnostico>
+                            </div>
+                        </form>
+    
+                    </div>
+                </div>
+    
+                <div id="card" class="card">
+            
+                    <div class="faceFront">
+                        <!-- IMAGEN DE FONDO -->
+                        <div class="box box-reparation box-card3 background">
+                            <div class="filtroTotal content-card-maintenance" id="contenido">
+                                <p>Diagnostico de Errores</p>
+    
+                                <span>Identificamos y solucionamos problemas con precisión. Diagnóstico confiable en minutos.</span>
     
                                 <button class="viewMore button-more">Solicitalo</button>
                             </div>
@@ -184,7 +198,44 @@
         </div>
     </footer>
 
+
+
 </body>
 
 <script src="scripts/index.js"></script>
+    
+<script>
+
+
+    // FORMULARIO DIAGNOSTICO
+    const formulario = document.querySelector('form');
+    const enviar = document.querySelector('.button-more')
+    const modal = document.querySelector('.modal');
+
+    formulario.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    modal.classList.add('modal-grid')
+
+    const nombre = document.querySelector('[data-nombre]').value;
+    const telefono = document.querySelector('[data-telefono]').value;
+    const mensaje = document.querySelector('[data-mensaje]').value;
+
+    console.log(nombre, telefono, mensaje);
+
+});
+
+    // FORMULARIO PREVENTIVO
+
+    // FORMULARIO CORRECTIVO
+
+    // MODAL
+    const closeModal = document.querySelector('.closeModal')
+
+    closeModal.addEventListener('click', function() {
+        modal.style.display = 'none'
+    })
+    
+</script>
+
 </html>

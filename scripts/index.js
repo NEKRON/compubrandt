@@ -17,9 +17,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const faceBackElements = document.querySelectorAll('.faceBack');
 
     viewMoreButtons.forEach(function(viewMore, index) {
-        viewMore.addEventListener('click', function() {
+        viewMore.addEventListener('click', function(event) {
+            event.preventDefault();
             faceFrontElements[index].classList.add('face', 'front');
-            faceBackElements[index].classList.add('face', 'back');
+            faceBackElements[index].classList.add('back');
         });
     });
 
@@ -27,10 +28,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const backButtonElements = document.querySelectorAll('.backButton');
 
     backButtonElements.forEach(function(back, index) {
-        back.addEventListener('click', function() {
+        back.addEventListener('click', function(event) {
+            event.preventDefault();
             faceFrontElements[index].classList.remove('face', 'front');
             faceBackElements[index].classList.remove('face', 'back');
-            // faceBackElements[index].classList.add('visible')
+            faceBackElements[index].classList.add('visible')
         });
     });
 
