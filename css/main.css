@@ -527,7 +527,7 @@ p {
     }
 }
 
-.box-services a {
+.    a {
     margin: 1.5rem;
 }
 
@@ -829,11 +829,15 @@ section.more {
 
 .content-card-maintenance form .campos input[type="text"], [type="tel"], textarea {
     height: 2.5rem;
-    background-color: #ffffff6e;
-    color: #ffffff;
+    background-color: #ffffff;
+    color: var(--fondoSecundario);
     border: none;
     padding-left: 1rem;
     font-weight: bolder;
+}
+
+input::placeholder, textarea::placeholder {
+    color: var(--fondoSecundario);
 }
 
 .content-card-maintenance form .campos textarea {
@@ -1158,7 +1162,7 @@ section.consulting {
 }
 
 .perifericos6 {
-    background-image: url(../img/perifericos/monitor2.avif);
+    background-image: url(../img/perifericos/msi144.webp);
 }
 
 /* =========================== */
@@ -1230,9 +1234,9 @@ section.consulting {
     width: 100%;
     height: 3rem;
     padding: 1rem;
-    color: #FFF;
+    color: var(--fondoSecundario);
     border: none;
-    background-color: #ffffff6e;
+    background-color: #ffffff;
 }
 
 .form-contact form textarea {
