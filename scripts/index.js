@@ -35,7 +35,6 @@ document.addEventListener('DOMContentLoaded', function() {
             faceBackElements[index].classList.add('visible')
         });
     });
-
 });
 
 

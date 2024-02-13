@@ -30,6 +30,7 @@
     border-radius: 2rem;
     display: flex;
     align-items: flex-end;
+    cursor: pointer;
 }
 
 @media (max-width: 700px) {
@@ -140,6 +141,17 @@
 }
 .box-services_5::before {
     background-color: rgba(153, 74, 0, 0.692);
+}
+
+
+.box-services a {
+    padding: 2rem;
+}
+
+@media (min-width: 768px) {
+    .box-services a {
+        padding: 0rem;
+    }
 }
 
 .box-services i, h3 {

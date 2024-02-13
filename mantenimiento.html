@@ -29,10 +29,10 @@
                     <ul>
                         <li><a href="index.html">Inicio</a></li>
                         <li><a href="mantenimiento.html">Mantenimiento</a></li>
-                        <li><a href="portatiles.html">Portatiles</a></li>
+                        <li><a href="portatiles.html">Computadores</a></li>
                         <li><a href="moviles.html">Moviles</a></li>
-                        <li><a href="desarrolloWeb.html">Desarrollo</a></li>
                         <li><a href="perifericos.html">Perifericos</a></li>
+                        <li><a href="desarrolloWeb.html">Desarrollo</a></li>
                         <button class="button-contact contact-no-visible" onclick="location.href='contacto.html'">Contactanos</button>
                     </ul>
                 </nav>
@@ -81,12 +81,11 @@
             <div class="content-cards">
                 <!-- ESTRUCTURA TARJETA GIRATORIA -->
                 <div id="card" class="card">
-            
                     <div class="faceFront">
                         <!-- IMAGEN DE FONDO -->
                         <div class="box box-reparation box-card1 background">
                             <div class="filtroTotal content-card-maintenance" id="contenido">
-                                <p>Reparacion de Equipo</p>
+                                <p>Reparacion de Equipo <br> <span style="font-size: .7rem; text-decoration: underline;">Ver más</span> </p>
     
                                 <span>Devolvemos la vida a tu dispositivo. Reparación rápida y eficaz garantizada.</span>
     
@@ -97,15 +96,16 @@
                     <div class="faceBack content-card-maintenance">
                         <!-- DESCRIPTION -->
                         <i class="backButton fa-solid fa-arrow-left"></i>
-    
-                        <form action="server/index.php">
+                        
+                        <!-- FORMULARIO SOLICITUD REPARACION -->
+                        <form action="" id="formReparacion">
                             <label for="" class="">Envienos su solicitud</label>
     
                             <div class="campos">
                                 <input type="text" placeholder="Nombre" required data-nombre>
                                 <input type="tel" placeholder="Telefono" required data-telefono>
                                 <textarea name="" id="" cols="20" rows="5" placeholder="Detallenos su problema" required data-mensaje></textarea>
-                                <input type="submit" value="Enviar" class="button-more" data-enviar_diagnostico>
+                                <input type="submit" value="Enviar" class="button-more" data-enviar-reparacion>
                             </div>
                         </form>
                     </div>
@@ -117,7 +117,7 @@
                         <!-- IMAGEN DE FONDO -->
                         <div class="box box-reparation box-card2 background">
                             <div class="filtroTotal content-card-maintenance" id="contenido">
-                                <p>Mantenimiento general</p>
+                                <p>Mantenimiento general <br> <span style="font-size: .7rem; text-decoration: underline;">Ver más</span></p>
     
                                 <span>Optimizamos tu dispositivo. Mantenimiento integral para un rendimiento duradero.</span>
     
@@ -128,15 +128,16 @@
                     <div class="faceBack content-card-maintenance">
                         <!-- DESCRIPTION -->
                         <i class="backButton fa-solid fa-arrow-left"></i>
-    
-                        <form action="server/index.php">
+                        
+                        <!-- FORMULARIO SOLICITUD MANTENIMIENTO -->
+                        <form action="" id="formGeneral">
                             <label for="" class="">Envienos su solicitud</label>
     
                             <div class="campos">
-                                <input type="text" placeholder="Nombre" required data-nombre>
-                                <input type="tel" placeholder="Telefono" required data-telefono>
-                                <textarea name="" id="" cols="20" rows="5" placeholder="Detallenos su problema" required data-mensaje></textarea>
-                                <input type="submit" value="Enviar" class="button-more" data-enviar_diagnostico>
+                                <input type="text" placeholder="Nombre" required data-nombre-gen>
+                                <input type="tel" placeholder="Telefono" required data-telefono-gen>
+                                <textarea name="" id="" cols="20" rows="5" placeholder="Detallenos su problema" required data-mensaje-gen></textarea>
+                                <input type="submit" value="Enviar" class="button-more" data-enviar-mantenimiento>
                             </div>
                         </form>
     
@@ -149,7 +150,7 @@
                         <!-- IMAGEN DE FONDO -->
                         <div class="box box-reparation box-card3 background">
                             <div class="filtroTotal content-card-maintenance" id="contenido">
-                                <p>Diagnostico de Errores</p>
+                                <p>Diagnostico de Errores <br> <span style="font-size: .7rem; text-decoration: underline;">Ver más</span></p>
     
                                 <span>Identificamos y solucionamos problemas con precisión. Diagnóstico confiable en minutos.</span>
     
@@ -160,15 +161,16 @@
                     <div class="faceBack content-card-maintenance">
                         <!-- DESCRIPTION -->
                         <i class="backButton fa-solid fa-arrow-left"></i>
-    
-                        <form action="server/index.php">
+                        
+                        <!-- FORMULARIO SOLICITUD DIAGNOSTICO -->
+                        <form action="" id="formDiagnostico">
                             <label for="" class="">Envienos su solicitud</label>
     
                             <div class="campos">
-                                <input type="text" placeholder="Nombre" required data-nombre>
-                                <input type="tel" placeholder="Telefono" required data-telefono>
-                                <textarea name="" id="" cols="20" rows="5" placeholder="Detallenos su problema" required data-mensaje></textarea>
-                                <input type="submit" value="Enviar" class="button-more" data-enviar_diagnostico>
+                                <input type="text" placeholder="Nombre" required data-nombre-diag>
+                                <input type="tel" placeholder="Telefono" required data-telefono-diag>
+                                <textarea name="" id="" cols="20" rows="5" placeholder="Detallenos su problema" required data-mensaje-diag></textarea>
+                                <input type="submit" value="Enviar" class="button-more" data-enviar-diagnostico>
                             </div>
                         </form>
     
@@ -206,27 +208,73 @@
 <script>
 
 
-    // FORMULARIO DIAGNOSTICO
-    const formulario = document.querySelector('form');
-    const enviar = document.querySelector('.button-more')
-    const modal = document.querySelector('.modal');
+// FORMULARIO REPARACION
+const formularioReparacion = document.querySelector('#formReparacion');
+const enviarReparacion = document.querySelector('[data-enviar-reparacion]');
+const modal = document.querySelector('.modal');
 
-    formulario.addEventListener('submit', function (event) {
+formularioReparacion.addEventListener('submit', function (event) {
     event.preventDefault();
 
-    modal.classList.add('modal-grid')
+    modal.classList.add('modal-grid');
 
-    const nombre = document.querySelector('[data-nombre]').value;
-    const telefono = document.querySelector('[data-telefono]').value;
-    const mensaje = document.querySelector('[data-mensaje]').value;
+    const nombre = document.querySelector('[data-nombre-reparacion]').value;
+    const telefono = document.querySelector('[data-telefono-reparacion]').value;
+    const mensaje = document.querySelector('[data-mensaje-reparacion]').value;
 
     console.log(nombre, telefono, mensaje);
 
+    // Limpiar la clase después de 3 segundos (ajusta el tiempo según tu preferencia)
+    setTimeout(() => {
+        modal.classList.remove('modal-grid');
+    }, 3000);
 });
 
-    // FORMULARIO PREVENTIVO
+// FORMULARIO MANTENIMIENTO
+const formularioMantenimiento = document.querySelector('#formGeneral');
+const enviarMantenimiento = document.querySelector('[data-enviar-mantenimiento]');
 
-    // FORMULARIO CORRECTIVO
+formularioMantenimiento.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    modal.classList.add('modal-grid');
+
+    const nombreGen = document.querySelector('[data-nombre-gen]').value;
+    const telefonoGen = document.querySelector('[data-telefono-gen]').value;
+    const mensajeGen = document.querySelector('[data-mensaje-gen]').value;
+
+    console.log(nombreGen, telefonoGen, mensajeGen);
+
+    // Limpiar la clase después de 3 segundos (ajusta el tiempo según tu preferencia)
+    setTimeout(() => {
+        modal.classList.remove('modal-grid');
+    }, 3000);
+});
+
+// FORMULARIO DIAGNOSTICO
+const formularioDiagnostico = document.querySelector('#formDiagnostico');
+const enviarDiagnostico = document.querySelector('[data-enviar-diagnostico]');
+
+formularioDiagnostico.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    modal.classList.add('modal-grid');
+
+    const nombreDiagnostico = document.querySelector('[data-nombre-diag]').value;
+    const telefonoDiagnostico = document.querySelector('[data-telefono-diag]').value;
+    const mensajeDiagnostico = document.querySelector('[data-mensaje-diag]').value;
+
+    console.log(nombreDiagnostico, telefonoDiagnostico, mensajeDiagnostico);
+
+    // Limpiar la clase después de 3 segundos (ajusta el tiempo según tu preferencia)
+    setTimeout(() => {
+        modal.classList.remove('modal-grid');
+    }, 3000);
+});
+
+
+
+
 
     // MODAL
     const closeModal = document.querySelector('.closeModal')

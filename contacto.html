@@ -29,10 +29,10 @@
                     <ul>
                         <li><a href="index.html">Inicio</a></li>
                         <li><a href="mantenimiento.html">Mantenimiento</a></li>
-                        <li><a href="portatiles.html">Portatiles</a></li>
+                        <li><a href="portatiles.html">Computadores</a></li>
                         <li><a href="moviles.html">Moviles</a></li>
-                        <li><a href="desarrolloWeb.html">Desarrollo</a></li>
                         <li><a href="perifericos.html">Perifericos</a></li>
+                        <li><a href="desarrolloWeb.html">Desarrollo</a></li>
                         <button class="button-contact contact-no-visible" onclick="location.href='contacto.html'">Contactanos</button>
                     </ul>
                 </nav>
@@ -62,22 +62,26 @@
     </header>
     
     <section id="contact-section" class="mobile-section">
+        <div class="modal">
+
+        </div>
+
         <div class="container">
             <h1 class="titles titles-section">Enviamos tu solicitud...</h1>
 
             <div class="form-contact">
                 <div class="background-contact background"><!-- IMAGEN DE FONDO --></div>
 
-                <form action="">
+                <form action="form_contact.php" method="post">
                     <label for="">Escribenos y en poco tiempo nos pondremos en contacto contigo.</label>
-                    <input type="text" placeholder="Nombre">
-                    <input type="tel" placeholder="Telefono">
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Mensaje..."></textarea>
+                    <input type="text" placeholder="Nombre"  name="nombreContact" required>
+                    <input type="tel" placeholder="Telefono" name="telefonoContact" required>
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Mensaje..." name="mensajeContact" required></textarea>
                     <input type="submit" value="Enviar" class="button-more">
 
                 </form>
             </div>
-            
+
         </div>
     </section>
 
