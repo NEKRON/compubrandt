@@ -72,13 +72,12 @@
             <div class="form-contact">
                 <div class="background-contact background"><!-- IMAGEN DE FONDO --></div>
 
-                <form action="form_contact.php" method="post">
+                <form action="" method="post">
                     <label for="">Escribenos y en poco tiempo nos pondremos en contacto contigo.</label>
                     <input type="text" placeholder="Nombre"  name="nombreContact" required>
                     <input type="tel" placeholder="Telefono" name="telefonoContact" required>
                     <textarea name="" id="" cols="30" rows="10" placeholder="Mensaje..." name="mensajeContact" required></textarea>
-                    <input type="submit" value="Enviar" class="button-more">
-
+                    <button class="button-more" onclick="envioDatos()">Enviar</button>
                 </form>
             </div>
 
@@ -100,4 +99,11 @@
 </body>
 
 <script src="scripts/index.js"></script>
+
+<script>
+        // ENVIO DATOS
+        function envioDatos() {
+            alert('Sus datos fueron recibidos correctamente, pronto nos contactaremos contigo')
+        }
+</script>
 </html>
